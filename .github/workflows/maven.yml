@@ -35,7 +35,7 @@ jobs:
       run: |
         docker build -t qkqh/springbootapp:2.0 ./SpringBootApp
 
-    - name: Push Docker Images to Docker Hub
-      run: |
-        docker push qkqh/springbootapp:2.0
-        docker push qkqh/springbootapp:2.0:latest
+   - name: Push Docker Images to Docker Hub
+     run: |
+    docker push qkqh/springbootapp:2.0
+    docker push qkqh/springbootapp:latest
