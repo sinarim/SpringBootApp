@@ -34,7 +34,7 @@ jobs:
       run: mvn clean package -DsikipTests -f ./SpringBootApp/pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: log in to Docker Hub
+    - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -47,4 +47,4 @@ jobs:
     - name: Push Docker Images to Docker Hub
       run:
         docker push qkqh/springbootapp:2.0
-        docker push qkqh/springbootapp:2.0:latest
+        docker push qkqh/springbootapp:latest
